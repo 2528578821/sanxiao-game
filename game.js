@@ -235,11 +235,11 @@
     return cellColorIndex(a) === cellColorIndex(b);
   }
 
-  // 替换为本地水果图片（0=apple 1=lanmei 2=ningmeng 3=orange 4=putao 5=banana）
+  // 替换为本地图标图片（0=accute1 1=corro1 2=explosives1 3=flaming1 4=gas1 5=oxi1）
   function tileColorByIndex(colorIdx) {
-    const fruitNames = ["apple", "lanmei", "ningmeng", "orange", "putao", "banana"];
-    const fruitName = fruitNames[colorIdx % fruitNames.length];
-    return `url(./${fruitName}.png)`; // 图片和html/js同目录，直接引用
+    const iconNames = ["accute1", "corro1", "explosives1", "flaming1", "gas1", "oxi1"];
+    const iconName = iconNames[colorIdx % iconNames.length];
+    return `url(./${iconName}.png)`; // 图片和html/js同目录，直接引用
   }
 
   function setHud() {
@@ -283,8 +283,8 @@
   }
 
   function colorName(idx) {
-    const names = ["苹果", "蓝莓", "柠檬", "橙子", "葡萄", "香蕉"];
-    return names[idx] ?? `水果#${idx}`;
+    const names = ["酸液", "腐蚀", "爆炸", "火焰", "毒气", "氧化"];
+    return names[idx] ?? `图标#${idx}`;
   }
 
   function updateStars(progress) {
